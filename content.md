@@ -2,15 +2,18 @@
 
 **1. [Introduction](#Introduction)** <br>
     - Info's about datasets
+    
 **2. [Librarys](#Librarys)** <br>
     - Importing Librarys
     - Importing Dataset
+    
 **3. [Knowning the data](#Known)** <br>
     - 3.1 Looking the Type of Data
     - 3.2 Shape of data
     - 3.3 Null Numbers
     - 3.4 Unique values
     - 3.5 The first rows of our dataset
+    
 **4. [Exploring some Variables](#Explorations)** <br>
     - 4.1 Ploting some graphical and descriptive informations
 **5. [Correlation of data](#Correlation)** <br>
@@ -93,4 +96,86 @@ print(df_credit.head())
 
 
 <h2>Let's start looking through target variable and their distribuition</h2>
+
+```
+# it's a library that we work with plotly
+import plotly.offline as py 
+py.init_notebook_mode(connected=True) # this code, allow us to work with offline plotly version
+import plotly.graph_objs as go # it's like "plt" of matplot
+import plotly.tools as tls # It's useful to we get some tools of plotly
+import warnings # This library will be used to ignore some warnings
+from collections import Counter # To do counter of some features
+
+trace0 = go.Bar(
+            x = df_credit[df_credit["Risk"]== 'good']["Risk"].value_counts().index.values,
+            y = df_credit[df_credit["Risk"]== 'good']["Risk"].value_counts().values,
+            name='Good credit'
+    )
+
+trace1 = go.Bar(
+            x = df_credit[df_credit["Risk"]== 'bad']["Risk"].value_counts().index.values,
+            y = df_credit[df_credit["Risk"]== 'bad']["Risk"].value_counts().values,
+            name='Bad credit'
+    )
+
+data = [trace0, trace1]
+
+layout = go.Layout(
+    
+)
+
+layout = go.Layout(
+    yaxis=dict(
+        title='Count'
+    ),
+    xaxis=dict(
+        title='Risk Variable'
+    ),
+    title='Target variable distribution'
+)
+
+fig = go.Figure(data=data, layout=layout)
+
+py.iplot(fig, filename='grouped-bar')
+'''
+
+
+
+```
+df_good = df_credit.loc[df_credit["Risk"] == 'good']['Age'].values.tolist()
+df_bad = df_credit.loc[df_credit["Risk"] == 'bad']['Age'].values.tolist()
+df_age = df_credit['Age'].values.tolist()
+
+#First plot
+trace0 = go.Histogram(
+    x=df_good,
+    histnorm='probability',
+    name="Good Credit"
+)
+#Second plot
+trace1 = go.Histogram(
+    x=df_bad,
+    histnorm='probability',
+    name="Bad Credit"
+)
+#Third plot
+trace2 = go.Histogram(
+    x=df_age,
+    histnorm='probability',
+    name="Overall Age"
+)
+
+#Creating the grid
+fig = tls.make_subplots(rows=2, cols=2, specs=[[{}, {}], [{'colspan': 2}, None]],
+                          subplot_titles=('Good','Bad', 'General Distribuition'))
+
+#setting the figs
+fig.append_trace(trace0, 1, 1)
+fig.append_trace(trace1, 1, 2)
+fig.append_trace(trace2, 2, 1)
+
+fig['layout'].update(showlegend=True, title='Age Distribuition', bargap=0.05)
+py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
+'''
+
 
