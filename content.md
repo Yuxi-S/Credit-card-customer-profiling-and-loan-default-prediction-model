@@ -56,7 +56,7 @@ It is almost impossible to understand the original dataset due to its complicate
 - Importing Librarys
 - Importing Dataset
 
-```
+```Python
 #Load the librarys
 import pandas as pd #To work with dataset
 import numpy as np #Math library
