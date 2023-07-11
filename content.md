@@ -25,12 +25,12 @@ Table of contents
      * [Setting X and Y](#Setting-X-and-Y)
      * [Spliting the X and Y in train and test ](Spliting-the-X-and-Y-in-train-and-test)
      
-   *[Model 1](#Model-1)
+   * [Model 1](#Model-1)
      * [Random Forest](#Random-Forest)
      * [Score Values](#Score-Values)
      * [Cross Validation](#Cross-Validation) 
      
-   *[Model 2](#Model-2)
+   * [Model 2](#Model-2)
      * [Logistic Regression](#Logistic-Regression) 
      * [Score Values](#Score-Values)
 
