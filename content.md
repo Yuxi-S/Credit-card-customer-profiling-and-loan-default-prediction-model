@@ -4,9 +4,11 @@ Table of contents
 
 <!--ts-->
    * [Introduction](#Introduction)
+     
    * [Librarys](#Librarys)
       * [Importing Librarys](#Importing-Librarys)
       * [Importing Dataset](#Importing-Dataset)
+        
   * [Knowing the Data](#Knowing-the-Data)
       * [Type of Data](#Type-of-Data)
       * [Shape of Data](#Shape-of-Data)
@@ -15,9 +17,9 @@ Table of contents
       * [The First Rows of our Dataset](#The-First-Rows-of-Our-Dataset)
     
    * [Exploring Variables](#Exploring-Some-Variables)
+     
    * [Correlation of Data](#Correlation-of-Data)
 
-     
    * [Preprocess](#Preprocess)
      * [Importing Librarys](#Importing-Librarys)
      * [Setting X and Y](#Setting-X-and-Y)
