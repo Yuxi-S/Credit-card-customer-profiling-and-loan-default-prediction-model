@@ -29,11 +29,10 @@ Table of contents
 
 <!--te-->
 
-# **1. Introduction:** 
-<h2>Context</h2>
+Introduction
+=====
 The original dataset contains 1000 entries with 20 categorial/symbolic attributes prepared by Prof. Hofmann. In this dataset, each entry represents a person who takes a credit by a bank. Each person is classified as good or bad credit risks according to the set of attributes. The link to the original dataset can be found below.
 
-<h2>Content</h2>
 It is almost impossible to understand the original dataset due to its complicated system of categories and symbols. Thus, I wrote a small Python script to convert it into a readable CSV file. Several columns are simply ignored, because in my opinion either they are not important or their descriptions are obscure. The selected attributes are:
 
 <b>Age </b>(numeric)<br>
@@ -50,9 +49,10 @@ It is almost impossible to understand the original dataset due to its complicate
 <a id="Librarys"></a> <br>
 
 
-# **2. Librarys:** 
+
+Librarys
+=====
 - Importing Librarys
-- Importing Dataset
 
 ```Python
 #Load the librarys
@@ -60,18 +60,23 @@ import pandas as pd #To work with dataset
 import numpy as np #Math library
 import seaborn as sns #Graph library that use matplot in background
 import matplotlib.pyplot as plt #to plot some parameters in seaborn
+'''
 
+- Importing Dataset
+
+```Python
 #Importing the data
 df_credit = pd.read_csv("/Users/syx/Downloads/german_credit_data.csv",index_col=0)
 '''
 
-<a id="Known"></a> <br>
-# **3. First Look at the data:** 
-- Looking the Type of Data
+
+
+Knowing the Data
+=====
+- Type of Data
 - Null Numbers
 - Unique values
 - The first rows of our dataset
-
 
 ```Python
 #Searching for Missings,type of data and also known the shape of data
