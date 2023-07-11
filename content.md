@@ -7,7 +7,7 @@
     - 2.1 Importing Librarys
     - 2.2 Importing Dataset
     
-**3. [Knowning the data](#Known)** <br>
+**3. [Knowing the data](#Knowing)** <br>
     - 3.1 Looking the Type of Data
     - 3.2 Shape of data
     - 3.3 Null Numbers
@@ -16,16 +16,20 @@
     
 **4. [Exploring some Variables](#Explorations)** <br>
     - 4.1 Ploting some graphical and descriptive informations
+    
 **5. [Correlation of data](#Correlation)** <br>
 	- 5.1 Correlation Data
+ 
 **6. [Preprocess](#Preprocessing)** <br>
 	- 6.1 Importing Librarys
 	- 6.2 Setting X and Y
     - 6.3 Spliting the X and Y in train and test 
+    
 **7. 1 [Model 1](#Modelling 1)** <br>
     - 7.1.1 Random Forest 
     - 7.1.2 Score values
     - 7.1.3 Cross Validation 
+    
 **7. 2 [Model 2](#Modelling 2)** <br>
     - 7.2.1 Logistic Regression 
     - 7.2.2 Score values
@@ -52,6 +56,8 @@ It is almost impossible to understand the original dataset due to its complicate
 <b>Risk </b> (Value target - Good or Bad Risk)<br>
 
 <a id="Librarys"></a> <br>
+
+
 # **2. Librarys:** 
 - Importing Librarys
 - Importing Dataset
