@@ -68,7 +68,7 @@ import matplotlib.pyplot as plt #to plot some parameters in seaborn
 ```Python
 #Importing the data
 df_credit = pd.read_csv("/Users/syx/Downloads/german_credit_data.csv",index_col=0)
-'''
+```
 
 
 
@@ -82,24 +82,21 @@ Knowing the Data
 ```Python
 #Searching for Missings,type of data and also known the shape of data
 print(df_credit.info())
-'''
+```
 
 ```Python
 #Looking unique values
 print(df_credit.nunique())
 #Looking the data
 print(df_credit.head())
-'''
+```
 
 
-# **4. Some explorations:** <a id="Explorations"></a> <br>
-
-- Starting by distribuition of column Age.
-- Some Seaborn graphical
-- Columns crossing
+Exploring Variables
+=====
 
 
-<h2>Let's start looking through target variable and their distribuition</h2>
+Let's start looking through target variable and their distribuition
 
 ```Python
 # it's a library that we work with plotly
@@ -140,7 +137,7 @@ fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='grouped-bar')
 
-'''
+```
 
 
 
@@ -170,11 +167,11 @@ g2.set_xlabel("Age")
 g2.set_xlabel("Count")
 plt.show()
 
-'''
+```
 
 
 
-<h2>I will now Look the distribuition of Housing own and rent by Risk</h2>
+Then I will now Look the distribuition of Housing own and rent by Risk.
 
 
 ```Python
@@ -202,11 +199,12 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='Housing-Grouped')
-'''
+```
+
 we can see that the own and good risk have a high correlation.
 
 
-<h3>Distribuition of Credit Amount by Housing</h3>
+Now we check distribuition of credit amount by housing.
 
 
 ```Python
@@ -265,13 +263,12 @@ fig = {
 
 fig = go.Figure(fig)
 fig.show()
-'''
+```
 
+Now we look the diference by sex
 
-<h2>Looking the diference by Sex</h2>
 
 ```Python
-
 # First plot
 trace0 = go.Bar(
     x=df_credit[df_credit["Risk"] == 'good']["Sex"].value_counts().index.values,
@@ -312,18 +309,18 @@ fig.add_trace(trace3, row=1, col=2)
 fig.update_layout(height=400, width=800, title='Sex Distribution', boxmode='group')
 
 fig.show()
-’‘’
+```
 
 
 
 Then I will do some explorations through the Job
+
 - Distribuition
 - Crossed by Credit amount
 - Crossed by Age
 
 
 ```Python
-
 #First plot
 trace0 = go.Bar(
     x = df_credit[df_credit["Risk"]== 'good']["Job"].value_counts().index.values,
@@ -347,11 +344,10 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='grouped-bar')
-’‘’
+```
 
 
 ```Python
-
 trace0 = go.Box(
     x=df_good["Job"],
     y=df_good["Credit amount"],
@@ -375,7 +371,7 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='box-age-cat')
-'''
+```
 
 
 
@@ -430,7 +426,7 @@ fig = {
 
 
 py.iplot(fig, filename = 'Age-Housing', validate = False)
-'''
+```
 
 
 
@@ -455,7 +451,7 @@ fig = ff.create_distplot(hist_data, group_labels, bin_size=.2)
 
 # Plot
 py.iplot(fig, filename='Distplot with Multiple Datasets')
-'''
+```
 
 
 ```Python
@@ -470,10 +466,9 @@ plt.show()
 '''
 
 
-Distruibution of Saving accounts by Risk
+Now check distruibution of saving accounts by risk
 
 ```Python
-
 print("Description of Distribuition Saving accounts by Risk:  ")
 print(pd.crosstab(df_credit["Saving accounts"],df_credit.Risk))
 
@@ -499,11 +494,10 @@ g2.set_ylabel("Credit Amount(US)", fontsize=12)
 plt.subplots_adjust(hspace = 0.4,top = 0.9)
 
 plt.show()
+```
 
-'''
 
 ```Python
-
 print("Values describe: ")
 print(pd.crosstab(df_credit.Purpose, df_credit.Risk))
 
@@ -535,12 +529,11 @@ g2.set_title("Credit Amount distribuition by Purposes", fontsize=20)
 plt.subplots_adjust(hspace = 0.6, top = 0.8)
 
 plt.show()
-'''
+```
 
-Duration of the loans distribuition and density
+Now check duration of the loans distribuition and density
 
 ```Python
-
 plt.figure(figsize = (12,14))
 
 g= plt.subplot(311)
@@ -567,10 +560,10 @@ g2.set_title("Duration Frequency x good and bad Credit", fontsize=20)
 plt.subplots_adjust(wspace = 0.4, hspace = 0.4,top = 0.9)
 
 plt.show()
-'''
+```
 
 
-<h2> Checking Account variable </h2>
+Checking Account variable 
 
 First, let's look the distribuition
 
@@ -608,7 +601,7 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='box-age-cat')
-'''
+```
 
 
 ```Python
@@ -640,11 +633,11 @@ plt.subplots_adjust(wspace = 0.2, hspace = 0.3, top = 0.9)
 
 plt.show()
 plt.show()
-'''
+```
 
 ```Python
 print(pd.crosstab(df_credit.Sex, df_credit.Job))
-'''
+```
 
 
 ```Python
@@ -657,24 +650,24 @@ g.set_ylabel("Job", fontsize=12)
 g.set_title("Housing x Job - Dist", fontsize=20)
 
 plt.show()
-'''
+```
 
 
 ```Python
 print(pd.crosstab(df_credit["Checking account"],df_credit.Sex))
-'''
+```
 
 ```Python
 date_int = ["Purpose", 'Sex']
 cm = sns.light_palette("green", as_cmap=True)
 pd.crosstab(df_credit[date_int[0]], df_credit[date_int[1]]).style.background_gradient(cmap = cm)
-'''
+```
 
 ```Python
 date_int = ["Purpose", 'Sex']
 cm = sns.light_palette("green", as_cmap=True)
 pd.crosstab(df_credit[date_int[0]], df_credit[date_int[1]]).style.background_gradient(cmap = cm)
-'''
+```
 
 
 # **5. Correlation:** <a id="Correlation"></a> <br>
