@@ -4,8 +4,8 @@
     - Info's about datasets
     
 **2. [Librarys](#Librarys)** <br>
-    - Importing Librarys
-    - Importing Dataset
+    - 2.1 Importing Librarys
+    - 2.2 Importing Dataset
     
 **3. [Knowning the data](#Known)** <br>
     - 3.1 Looking the Type of Data
