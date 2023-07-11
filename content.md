@@ -13,16 +13,21 @@ Table of contents
       * [Null Numbers](#Null-Numbers)
       * [Unique Values](#Unique-Values)
       * [The First Rows of our Dataset](#The-First-Rows-of-Our-Dataset)
+    
    * [Exploring Variables](#Exploring-Some-Variables)
    * [Correlation of Data](#Correlation-of-Data)
+
+     
    * [Preprocess](#Preprocess)
      * [Importing Librarys](#Importing-Librarys)
      * [Setting X and Y](#Setting-X-and-Y)
-     * [Spliting the X and Y in train and test ](Spliting-the-X-and-Y-in-train-and-test) 
+     * [Spliting the X and Y in train and test ](Spliting-the-X-and-Y-in-train-and-test)
+     
    *[Model 1](#Model-1)
      * [Random Forest](Random-Forest)
      * [Score Values](Score-Values)
      * [Cross Validation](Cross-Validation) 
+     
    *[Model 2](#Model-2)
      * [Logistic Regression](Logistic-Regression) 
      * [Score Values](Score-Values)
