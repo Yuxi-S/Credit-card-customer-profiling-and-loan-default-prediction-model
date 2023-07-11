@@ -1,62 +1,32 @@
-# Tables of Content:¶
-
-**1. [Introduction](#Introduction)** <br>
-    - Info's about datasets
-    
-**2. [Librarys](#Librarys)** <br>
-    - 2.1 Importing Librarys
-    
-    - 2.2 Importing Dataset
-    
-**3. [Knowing the data](#Knowing)** <br>
-    - 3.1 Looking the Type of Data
-    - 3.2 Shape of data
-    - 3.3 Null Numbers
-    - 3.4 Unique values
-    - 3.5 The first rows of our dataset
-    
-**4. [Exploring some Variables](#Explorations)** <br>
-    - 4.1 Ploting some graphical and descriptive informations
-    
-**5. [Correlation of data](#Correlation)** <br>
-	- 5.1 Correlation Data
- 
-**6. [Preprocess](#Preprocessing)** <br>
-	- 6.1 Importing Librarys
-	- 6.2 Setting X and Y
-    - 6.3 Spliting the X and Y in train and test 
-    
-**7. 1 [Model 1](#Modelling 1)** <br>
-    - 7.1.1 Random Forest 
-    - 7.1.2 Score values
-    - 7.1.3 Cross Validation 
-    
-**7. 2 [Model 2](#Modelling 2)** <br>
-    - 7.2.1 Logistic Regression 
-    - 7.2.2 Score values
-    - 7.2.3 Cross Validation 
-    - 7.2.4 ROC Curve
-
 
 Table of contents
 =================
 
 <!--ts-->
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
-      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
-     * [Local](#local)
-     * [Public](#public)
+   * [Introduction](#Introduction)
+   * [Librarys](#Librarys)
+      * [Importing Librarys](#Importing-Librarys)
+      * [Importing Dataset](#Importing-Dataset)
+  * [Knowing the Data](#Knowing-the-Data)
+      * [Type of Data](#Type-of-Data)
+      * [Shape of Data](#Shape-of-Data)
+      * [Null Numbers](#Null-Numbers)
+      * [Unique Values](#Unique-Values)
+      * [The First Rows of our Dataset](#The-First-Rows-of-Our-Dataset)
+   * [Exploring Variables](#Exploring-Some-Variables)
+   * [Correlation of Data](#Correlation-of-Data)
+   * [Preprocess](#Preprocess)
+     * [Importing Librarys](#Importing-Librarys)
+     * [Setting X and Y](#Setting-X-and-Y)
+     * [Spliting the X and Y in train and test ](Spliting-the-X-and-Y-in-train-and-test) 
+   *[Model 1](#Model-1)
+     * [Random Forest](Random-Forest)
+     * [Score Values](Score-Values)
+     * [Cross Validation](Cross-Validation) 
+   *[Model 2](#Model-2)
+     * [Logistic Regression](Logistic-Regression) 
+     * [Score Values](Score-Values)
+
 <!--te-->
 
 # **1. Introduction:** 
